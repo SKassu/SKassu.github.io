@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Changing CSS with Event Listeneres</h1>
+    <div>
+        <label>Background colors</label>
+        <input type="text" class="js-bg-color" style='padding: 30px;
+        font-size: 30px;'>
+    </div>
+    <div>
+        <label>Text colors</label>
+        <input type="text" class="js-text-color" style='padding: 30px;
+        font-size: 30px;'>
+    </div>
+
+    <script>
+
+    // Kaikkien koodi
+        var bgColor = document.querySelector(".js-bg-color")
+        var textColor = document.querySelector(".js-text-color")
+        var body = document.querySelector("body")
+
+        // BackgroundColorin vaihtaja
+        bgColor.addEventListener('keyup', function(event) {
+            body.style.backgroundColor = event.target.value
+        });
+
+        // Jos väri on joku muu kuin red, white tai blue niin tausta väristä tulee pinkki
+            bgColor.addEventListener('keyup', function(event) {
+                var color = event.target.value
+                switch(color) {
+                 case 'red':
+                 case 'white':
+                 case 'blue':
+                    body.style.backgroundColor = color
+                    break
+                default:
+                    body.style.backgroundColor = "pink"
+                    break
+            }
+        });
+
+        // Tekstin värin vaihto
+        textColor.addEventListener('keyup', function(event) {
+            body.style.color = event.target.value
+        });
+
+    </script>
+
+</body>
+</html>
