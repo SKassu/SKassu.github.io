@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // var arr = ["Suiman", "Noel", "Juusto", "Prairie", "Henry", "Veto", "Maya"]
+        // const Suiamn = arr[0]
+        // const Noel = arr[1]
+
+        // let [Suiman, Noel, Juusto] = arr
+        // let [Suiman, Noel, Juusto, ...rest] = arr
+        // console.log(rest)
+
+        // var fullName = prompt("What is your FULL name?") // String
+        // Kasper Olin
+        // let [firstName, lastName] = fullName.split(' ')
+
+        // console.log(firstName, " is the firstName")
+        // console.log(lastName, " is the lastName")
+
+
+        const person = {
+            "name":  "Kasper",
+            'age': 16,
+            'cats': 2,
+            'food': 'el taco',
+            // 'color': 'blue'
+        }
+
+        
+        let {
+            // Key: newVarNameIs
+            name,
+            food,
+            color = 'blue',
+            ...rest
+        } = person
+        console.log("Name is ", name)
+        console.log("new favoriteFood is ", food)
+        console.log("Fav Color is ", color)
+
+
+    </script>
+
+</body>
+</html>
