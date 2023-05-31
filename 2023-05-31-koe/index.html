@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="js-change-name">Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="h1">moro!</h1>
+    
+    <button class="btn">
+        Paina tästä!
+    </button>
+
+    <input type="text" class="form-control js-name">
+
+    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat amet praesentium et! Tempore at repellendus nostrum mollitia asperiores vitae esse illo cum, velit cupiditate consequatur eum atque, totam, ea est! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae adipisci recusandae maxime animi vel cupiditate, voluptates dolore temporibus at neque aperiam qui pariatur eum, tempora ipsam! Laudantium consequatur dignissimos ducimus.</p>
+
+    <script>
+
+        var input = document.querySelector(".js-name")
+        var nameElem = document.querySelector(".js-change-name")
+        function callBack(event) {
+            nameElem.innerTEXT = event.target.value
+        }
+        input.addEventListener('keyup', callBack)
+
+    </script>
+
+</body>
+</html>
